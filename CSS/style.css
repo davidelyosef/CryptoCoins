@@ -1,0 +1,317 @@
+
+body {
+    background-color: lightyellow;
+}
+/* Parallex scroller */ 
+.parallex {
+    width: 100%;
+    height: calc(100vh);
+    background: url(../assets/cryptoImage3.png) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+/* that one not influenced by the parallex scroller function in JS */
+.parallex-sm {
+    display: none;
+    width: 100%;
+    height: calc(100vh);
+    background: url(../assets/cryptoImage3.png) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+/* Design the main title */
+@font-face {
+    font-family: BlackRoties;
+    src: url(../fonts/BlackRoties.ttf);
+}
+h1 {
+    text-align: center;
+    font-family: BlackRoties;
+    font-size: 630%;
+}
+/* Positioning the main buttons and setting borders */
+#menuButtons {
+    /* sticky header */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: lightyellow;
+    /* design */
+    margin: 3px;
+    border-top: 4px double #AAA;
+    border-bottom: 4px double #AAA;
+    text-align: center;
+}
+.main {
+    text-decoration: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+#menuButtons li {
+    display: inline-block;
+    margin: 20px;
+    transform: skewy(-3deg);
+    backface-visibility: hidden;
+}
+/* Design the buttons */
+#menuButtons li button {
+    text-transform: uppercase;
+    font-family: 'Squada One', cursive;
+    font-weight: bold;
+    display: block;
+    background: rgb(101, 174, 199);
+    padding: 2px 30px;
+    /* padding: 0; */
+    color: #333;
+    font-size: 35px;
+    /* font-size: 20px; */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 3px 2px #FFF;
+    /* text-shadow: 2px 1.3px #FFF; */
+    transition: 1s all;
+    background-image: -webkit-linear-gradient(left top, transparent 15%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, .15) 50%, transparent 75%, rgba(0, 0, 0, 0.15) 25%);
+    background-size: 3px 3px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4) inset, 0 0 20px -5px rgba(146, 145, 145, 0.4), 0 0 0px 3px #FFF inset;
+}
+/* Hover */
+#menuButtons button:hover {
+    color: #856a15;
+    margin: -15px;
+}
+/* Create that grey shadow */
+#menuButtons li:after,
+#menuButtons li:before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    /* width: 30px; */
+    height: 100%;
+    background: rgb(153, 151, 151);
+    transform: skewY(8deg);
+    border-radius: 4px;
+}
+#menuButtons li:after {
+    background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, .4) 100%);
+    right: 0;
+    top: -4px;
+}
+#menuButtons li:before {
+    left: 0;
+    bottom: -4px;
+    background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0, 0, 0, .4) 100%);
+}
+/* Margin the section  */
+section {
+    margin: 40px;
+    text-align: center;
+}
+/* Design the scroll bar */
+body::-webkit-scrollbar {
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+	background-image: -webkit-linear-gradient(90deg,
+    transparent,
+    rgba(0, 0, 0, 0.9) 50%,
+    transparent)
+}
+body::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #CCCCCC;
+}
+/* Decorate some text */
+.underline {
+    text-decoration: underline;
+}
+/* Loading image style */
+#loading {
+    width: 400px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+/* Design the cards */
+.card {
+    overflow: auto;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 2px;
+    width: 220px;
+    background-color: lightcyan;
+    border-radius: 20px;
+    height: 313px;
+}
+/* Center the information inside the cards */
+table {
+    margin: auto;
+    font-size: 20px;
+}
+/* Design the `more info` button and hover */
+.infoButtonClass:hover {
+    background-color: rgb(101, 174, 199);
+    transition: 1s;
+}
+.infoButtonClass {
+    transition: background-color 1s;
+    margin-top: 5px;
+    border-radius: 20%;
+}
+.moreInfoImg {
+    float: left;
+    position: relative;
+    left: 15px;
+}
+.inlineParagraph {
+    display: inline-block;
+}
+/* Design the toggle switch */
+.switch {
+    position: relative;
+    bottom: 3px;
+    margin: 8px;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+/* Positioning the slider */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(206, 205, 205);
+}
+/* Circle the slider shape  */
+.slider.round:before {
+    border-radius: 50%;
+}
+/* Design the slider */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    transition: .4s;
+}
+/* Change the background-color when switching */
+input:checked + .slider {
+    background-color: rgb(101, 174, 199);
+}
+/* Create a shadow around the input when focusing on it */
+input:focus + .slider {
+    box-shadow: 0 0 5px rgb(101, 174, 199);
+}
+/* Moving the circle side to side by clicking it */
+input:checked + .slider:before {
+    transform: translateX(28px);
+    -ms-transform: translateX(28px);
+}
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+/* Search Field */
+#searchField {
+    margin-top: 15px;
+    margin-bottom: -10px;
+    width: 200px;
+    height: 43px;
+    padding: 4px;
+    border-radius: 12px;
+    box-shadow: 2px 3px 18px rgb(5, 97, 128);
+    border: 1px solid black;
+}
+#searching {
+    display: none;
+    float: right;
+    position: relative;
+    top: 12px;
+    right: 15px;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Copy rights */
+#copyrights {
+    text-align: center;
+}
+/* About */
+#profile {
+    width: 300px;
+    height: 300px;
+}
+/* Design different styles for different width of the screens */ 
+
+/* Mobile Styles */
+@media only screen and (max-width: 900px) {
+
+   .parallex {
+    display: none;
+    }
+    .parallex-sm {
+    display: block;
+    }
+    h1 {
+        font-size: 400%;
+    }
+    #menuButtons {
+        text-align: left;
+        margin-left: -40px;
+    }
+    #menuButtons li {
+        margin: 10px;
+    }
+    #searching {
+        top: -8px;
+    }
+    #menuButtons li button {
+        padding: 0;
+        font-size: 20px;
+        text-shadow: 2px 1.3px #FFF;
+    }
+    #menuButtons li:after,
+    #menuButtons li:before {
+        width: 30px;
+    }
+    #searchField {
+        width: 150px;
+        height: 37px;
+        padding: 4px;
+    }
+    section {
+       margin: 10px; 
+    }
+    
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 901px) and (max-width: 1000px) {
+
+  .parallex {
+        display: none;
+    }
+    .parallex-sm {
+        display: block;
+    }
+    #menuButtons {
+        text-align: left;
+        margin-left: -40px;
+    }
+    #menuButtons li {
+        margin: 10px;
+    }
+    #searching {
+        top: 5px;
+    }
+}

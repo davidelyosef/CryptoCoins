@@ -1,0 +1,76 @@
+
+/* Modal Decoration */
+.col-12 {
+    top: -39px;
+}
+.modal-body{
+    background: lightcyan;
+    color: rgb(196, 152, 8);
+    width: 100%;
+}
+.modal-body>div{
+    clear: both;
+    margin: 0;
+}
+.modal-body p, .modal-body input{
+    display: inline-block;
+}
+.modal-content .btn-primary{
+    background: rgb(3, 4, 109);
+}
+.modal-content .btn-primary:hover{
+    background: rgb(3, 4, 70);
+}
+.modal-content button{
+    border: none;
+    color: lightyellow;
+}
+.modal-content{
+    background: lightyellow;
+    border: 3px solid black;
+}
+/* // Toggle Modal Section */
+.modal-body #switch[type="checkbox"] {
+    margin:10px;
+    background: rgb(206, 205, 205);
+    position: relative;
+    float: right;
+    width:30px;
+    height:10px;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #353535, 0 0 0 2.5px #3e3e3e, inset 0 0 3px rgba(0,0,0,1);
+}
+  
+.modal-body #switch:checked[type="checkbox"] {
+    background: rgb(101, 174, 199);
+    box-shadow: 0 0 0 1px #353535, 0 0 0 2.5px #3e3e3e, inset 0 0 3px rgba(0,0,0,1);
+}
+  
+.modal-body #switch[type="checkbox"]:before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:15px;
+    height:10px;
+    background: white;
+    border-radius: 24px;
+    transition:.5s;
+}
+
+.modal-body #switch:checked[type="checkbox"]:before {
+    left:13px;
+}
+
+.modal-body #switch[type="checkbox"]:after{
+    content:'';
+    position:absolute;
+    top:calc(50% - 2px);
+    left:13px;
+    width:4px;
+    height:4px;
+    border-radius: 50%;
+    transition:.5s;
+}
