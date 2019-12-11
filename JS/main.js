@@ -31,11 +31,24 @@
         $("#aboutButton").click(() => {
             $("section > #about").show();
             $("section > #about").append(loadGif);
-            const name = `<p><span class="underline">Name: </span>&nbsp David-el Yosef</p>`;
-            const projectDetails = `<p><span class="underline">Project Details: </span>&nbsp The project is about giving information and current-time data 
-            about the Cryptography market</p>`;
+            const logoes = `<div>
+            <h3>Contact Details</h3><br/>
+            <a target="_blank" href="mailto:davidyf96@gmail.com">
+                <img src='./assets/gmail.png' class='logo'>
+            </a>
+            <a target="_blank" href="https://github.com/davidelyosef">
+                <img src='./assets/github.png' class='logo'>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/david-el-yosef-5736b7196">
+                <img src='./assets/linkedin.png' class='logo'>
+            </a>
+            </div><br />`
+            const projectDetails = `<p>The project is about giving information and current-time data 
+            about the Cryptography market <br />
+            You can search the coins in the search field, see their information and select up to 5 coins <br />
+            You can see the coins you picked on a chart with real-time price.</p>`;
             const profile = `<img id="profile" src="assets/profilePic.png">`
-            $("section > #about").html(name + projectDetails + profile);
+            $("section > #about").html(projectDetails + logoes + profile);
             $("#loading").hide();
         });
 
