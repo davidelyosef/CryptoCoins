@@ -136,6 +136,7 @@ body::-webkit-scrollbar-track {
 }
 /* Design the cards */
 .card {
+    transition: 1s;
     overflow: auto;
     display: inline-block;
     text-align: center;
@@ -146,6 +147,10 @@ body::-webkit-scrollbar-track {
     background-color: lightcyan;
     border-radius: 20px;
     height: 313px;
+}
+.card:hover {
+    transform: scale(1.1);
+    transition: 1s ease-out;
 }
 /* Center the information inside the cards */
 table {
@@ -250,6 +255,16 @@ input:checked + .slider:before {
 #profile {
     width: 300px;
     height: 300px;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    transition: 1s;
+}
+.logo:hover {
+    transform: scale(1.1);
+    transition: 1s ease;
 }
 /* Design different styles for different width of the screens */ 
 
