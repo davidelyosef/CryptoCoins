@@ -155,7 +155,8 @@
         $("section > #coins").append(loadGif);
         getData("https://api.coingecko.com/api/v3/coins/list")
             .then(coins => {
-                for (let i = 2; i < 102; i++) {
+                let startFrom = 500;
+                for (let i = startFrom; i < 720; i++) {
                     // Information about each coin
                     const theSymbol = `<table><tr><td><span class="underline">Symbol</span>: </td><td class="capitalize">${coins[i].symbol}</td></tr>`;
                     const theName = `<tr><td><span class="underline">Name</span>: </td><td>${coins[i].name}</td></tr></table>`;
@@ -176,7 +177,7 @@
                     const allDetails = `<div id="${coins[i].symbol}" class ="card">${theSymbol}${theName}${infoButton}${toggleButton}${infoDiv}</div>`;
                     $("#coins").append(allDetails);
                     // Input the correct values of every `more info` button 
-                    let cardIndex = i - 1;
+                    let cardIndex = i - startFrom + 1;
 
                     moreInfo(cardIndex, coins[i].id);
                     toggleSwitch(cardIndex, coins[i].symbol);
