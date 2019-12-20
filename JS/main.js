@@ -156,7 +156,7 @@
         getData("https://api.coingecko.com/api/v3/coins/list")
             .then(coins => {
                 let startFrom = 500;
-                for (let i = startFrom; i < 720; i++) {
+                for (let i = startFrom; i < 730; i++) {
                     // Information about each coin
                     const theSymbol = `<table><tr><td><span class="underline">Symbol</span>: </td><td class="capitalize">${coins[i].symbol}</td></tr>`;
                     const theName = `<tr><td><span class="underline">Name</span>: </td><td>${coins[i].name}</td></tr></table>`;
